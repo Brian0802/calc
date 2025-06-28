@@ -1,5 +1,8 @@
 import customtkinter as ctk
-from ui import UI
+from calculator import Calculator
+
+ctk.set_appearance_mode("dark")
+ctk.set_default_color_theme("green")
 
 if __name__ == "__main__":
     root = ctk.CTk()
@@ -7,5 +10,5 @@ if __name__ == "__main__":
     root.geometry("360x720")
     root.resizable(False,False)
     root.config(bg="black")
-    app = UI(root)
+    app = Calculator(root)
     root.mainloop()
