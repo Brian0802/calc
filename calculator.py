@@ -55,7 +55,7 @@ class Calculator:
     def _handle_keypress(self):
         self.root.bind("<Key-Escape>", lambda event: self.exit())
         self.root.bind("<c>", lambda event: self.clear_field())
-        self.root.bind("<C>", lambda event: self.clear_field())  # Both cases
+        self.root.bind("<C>", lambda event: self.clear_field())
         self.root.bind("<Return>", lambda event: self.evaluate_calculation())
         self.root.bind("<BackSpace>", lambda event: self.backward())
         
@@ -333,7 +333,7 @@ class Calculator:
     def exit(self):
         """Safe exit with confirmation"""
         if messagebox.askyesno("Exit", "Are you sure you want to exit?"):
-            self.root.quit()  # Use quit() instead of destroy() for cleaner exit
+            self.root.quit()
             self.root.destroy()
 
     def get_calculation_history(self):
