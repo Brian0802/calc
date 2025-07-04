@@ -80,7 +80,6 @@ class Calculator:
 
     def switch_tab(self):
         try:
-            from button_layout import ButtonLayout
             
             if self.tab == "tab1":
                 self.tab = "tab2"
